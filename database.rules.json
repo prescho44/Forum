@@ -1,0 +1,12 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+    "posts": {
+      ".indexOn": ["createdOn", "uid"]
+    },
+    "users": {
+      ".indexOn": ["uid", "handle"]
+    }
+  }
+}
