@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./config/firebase-config";
@@ -77,6 +78,7 @@ function App() {
           </Routes>
         </AppContext.Provider>
       </BrowserRouter>
+      <Analytics />
     </div>
   );
 }
