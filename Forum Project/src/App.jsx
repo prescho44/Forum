@@ -1,21 +1,21 @@
-import { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from './config/firebase-config';
-import { getUserData } from './services/users.service';
-import { AppContext } from './components/store/app.context';
-import Admin from './components/Admin/Admin';
-import Dashboard from './components/Dashboard/Dashboard';
-import Home from './view/Home/Home';
-import Login from './components/Login/Login';
-import MainLayout from './components/MainLayout/MainLayout';
-import NotFound from './view/NotFound/NotFound';
-import PostView from './components/PostView/PostView';
-import ProfileView from './components/ProfileLayout/ProfileView/ProfileView';
-import Register from './components/Register/Register';
-import SearchResults from './components/Search/SearchResults';
-import UploadView from './components/Upload/Upload';
-import CarNews from './components/CarNews/CarNews';
+import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "./config/firebase-config";
+import { getUserData } from "./services/users.service";
+import { AppContext } from "./components/store/app.context";
+import Admin from "./components/Admin/Admin";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Home from "./view/Home/Home";
+import Login from "./components/Login/Login";
+import MainLayout from "./components/MainLayout/MainLayout";
+import NotFound from "./view/NotFound/NotFound";
+import PostView from "./components/PostView/PostView";
+import ProfileView from "./components/ProfileLayout/ProfileView/ProfileView";
+import Register from "./components/Register/Register";
+import SearchResults from "./components/Search/SearchResults";
+import UploadView from "./components/Upload/Upload";
+import CarNews from "./components/CarNews/CarNews";
 
 function App() {
   const [appState, setAppState] = useState({
@@ -54,7 +54,7 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <AppContext.Provider value={{ ...appState, setAppState }}>
           <Routes>
             {/* Routes with main layout */}
