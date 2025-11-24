@@ -39,13 +39,38 @@ cd "Forum Project"
 npm install
 ```
 
-3. Start development server
+3. **Set up environment variables**:
+
+Create a `.env` file in the root directory by copying the example:
+
+```sh
+cp .env.example .env
+```
+
+Then edit `.env` and add your API keys:
+
+```env
+# Firebase Configuration
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_FIREBASE_DATABASE_URL=https://your_project.firebasedatabase.app
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_project.firebasestorage.app
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
+
+# News API
+VITE_NEWS_API_KEY=your_news_api_key
+```
+
+4. Start development server
 
 ```sh
 npm run dev
 ```
 
-4. Open browser and visit `http://localhost:5173`
+5. Open browser and visit `http://localhost:5173`
 
 ## Database Structure
 
